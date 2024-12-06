@@ -10,8 +10,7 @@ app = Flask(__name__)
 object_detector = pipeline('object-detection', model='facebook/detr-resnet-50', device=0)
 
 # URL of the live camera feed
-url = 'https://wzmedia.dot.ca.gov/D8/LB-8_18_125.stream/playlist.m3u8'
-#url = 'animals.mp4'
+url = 'http://wzmedia.dot.ca.gov/D8/LB-8_18_125.stream/playlist.m3u8'
 cap = cv2.VideoCapture(url)
 
 if not cap.isOpened():
